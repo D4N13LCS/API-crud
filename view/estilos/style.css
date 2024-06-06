@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+:root{
+    --cor01: #F0F0F2;
+    --cor02: #736055;
+    --cor03: #7E6C5E;
+    --cor04: #261D1A;
+    --cor05: #f3e7e3;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body,html{
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor03);
+    position: absolute;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    transition-timing-function: ease;
+    transition: width .5s, height .5s;
+    background-color: white;
+    border-radius: 10px;
+    width: 350px;
+    padding-bottom: 10px;
+    margin: 30px auto;
+}
+
+section#login{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+main > section#login > div#imagem > img{
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 215px;
+} 
+
+section#login > div#imagem{
+    border-radius: 10px 10px 0px 0px;
+    height: 200px;
+    background-image: url(file:///C:/Users/Optx%209010/Documents/estudos/API%20REST/view/imagens/pexels-tyler-lastovich-699122.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+div#formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0px 10px;
+}
+
+div#formulario > form{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+div#formulario > h1{
+    text-align: center;
+}
+
+div#formulario > p{
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.campos{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--cor04);
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+
+.campos > input{
+    height: 35px;
+    width: 100%;
+    padding-left: 5px;
+    border-radius: 8.5px;
+    background-color: var(--cor05);
+}
+
+.crud{
+    width: 100%;
+    height: 35px;
+    background-color: var(--cor05);
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+div#formulario > form > div#cadastrar > input:hover, 
+div#formulario > form > div#exclude > input:hover, #updt:hover{
+background-color: var(--cor02);
+color: white;
+}
+
+
+.icone{
+    width: 23px;
+}
+
+
+

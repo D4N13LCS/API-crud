@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+body{
+    background-image: linear-gradient(to bottom, var(--cor01), var(--cor02));
+}
+
+main{
+    border-radius: 10px 10px 10px 10px;
+    width: 950px;
+    height: 405px;  
+    padding: 0px;
+    margin-top: 130px;
+}
+
+section#login{
+    display: flex;
+    height: 100%;
+}
+
+section#login > div#imagem{  
+    height: 100%;
+    width: 45%;
+    order: 2;
+    border-radius: 0px 10px 10px 0px;
+}
+
+section#login > div#formulario{
+    width: 55%;
+    order: 1;
+}
+
+p{
+  font-size: 0.8em; 
+}
+
+div#formulario > form > div#exclude > input, 
+div#formulario > form > div#cadastrar > input{
+    width: 500px;
+}
+
+section#login > div#formulario{
+    margin-top: 20px;
+}
+
+section#login > div#formulario > h1{
+    font-size: 2em;
+}
