@@ -4,7 +4,6 @@ const app = express();
 const rotaDeProdutos = require('./routes/produtos');
 const bodyParser = require('body-parser');
 
-app.use('/uploads', express.static('uploads')); 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false})); 
 

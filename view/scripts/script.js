@@ -1,6 +1,6 @@
 "use strict";
 
-const urlProduto = "http://localhost:3000/produtos";
+const urlProduto = "https://api-crud-daniel-7c967317f81f.herokuapp.com/produtos";
 const form = document.getElementById('formulario');
 const btn_cdstr = document.getElementById('cdstr');
 const btn_del = document.getElementById('del');
