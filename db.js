@@ -2,10 +2,10 @@ const db = require('mysql');
 
 var pool = db.createPool(
     {
-    "user": "j3owxxv8ftnpckh1",
-    "password": "vefacmybz4gfuapr",
-    "database": "lv79hage45wfl1qr",
-    "host": "h40lg7qyub2umdvb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "user": "root",
+    "password": process.env.senha,
+    "database": "ecommerce",
+    "host": "localhost",
     "port": 3306,
 
 }
