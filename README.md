@@ -1,6 +1,13 @@
 Caso queira visualizar como o banco de dados está se comportando, basta rodar o seguinte código no MySQL Workbench para criar uma instância do banco de dados utilizado na API:
 
-CREATE DATABASE `lv79hage45wfl1qr` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE `Nome de um banco de dados qualquer`;
+
+CREATE TABLE `produtos` (
+  `id_produto` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) DEFAULT NULL,
+  `preco` float DEFAULT NULL,
+  PRIMARY KEY (`id_produto`)
+);
 
 CREATE TABLE `pedidos` (
   `id_pedidos` int NOT NULL AUTO_INCREMENT,
@@ -9,18 +16,26 @@ CREATE TABLE `pedidos` (
   PRIMARY KEY (`id_pedidos`,`id_produto`),
   KEY `fk_pedidos_produtos_idx` (`id_produto`),
   CONSTRAINT `fk_pedidos_produtos` FOREIGN KEY (`id_produto`) REFERENCES `produtos` (`id_produto`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
-CREATE TABLE `produtos` (
-  `id_produto` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(45) DEFAULT NULL,
-  `preco` float DEFAULT NULL,
-  PRIMARY KEY (`id_produto`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
+);
 
 credenciais para realizar a instância: 
 
-MYSQL_HOST: h40lg7qyub2umdvb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
-MYSQL_USER: j3owxxv8ftnpckh1
-MYSQL_PASSWORD: vefacmybz4gfuapr
-MYSQL_PORT: 3306
+No arquivo db.js que está no root do projeto, altere as informações de acordo com o seu banco de dados.
+
+Será algo como:
+
+const db = require('mysql');
+
+var pool = db.createPool(
+    {
+    "user": "seu usuário",
+    "password": "sua senha",
+    "database": "sua database",
+    "host": "localhost",
+    "port": 3306,
+}
+);
+
+exports.pool = pool;
+
+OBS: O projeto funciona normalmente, essas instruções devem ser seguidas caso queira uma confirmação do funcionamento da aplicação.
