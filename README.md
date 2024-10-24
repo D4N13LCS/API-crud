@@ -1,3 +1,5 @@
+Para testar a aplicação, clone esse repositório na sua máquina local e, no terminal, rode o seguinte código: npm start. Após isso, abra o arquivo index.html no browser. Agora é só testar.
+
 Caso queira visualizar como o banco de dados está se comportando, basta rodar o seguinte código no MySQL Workbench para criar uma instância do banco de dados utilizado na API:
 
 CREATE DATABASE `Nome de um banco de dados qualquer`;
