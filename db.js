@@ -2,7 +2,7 @@ const db = require('mysql');
 
 var pool = db.createPool(
     {
-    "user": "cardosodaniel@localhost",
+    "user": "cardosodaniel",
     "password": "Senha43215",
     "database": "l1brary_2",
     "host": "db4free.net",
