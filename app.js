@@ -4,7 +4,7 @@ const app = express();
 const rotaDeProdutos = require('./routes/produtos');
 const bodyParser = require('body-parser');
 
-app.use('/uploads', express.static('uploads')); 
+app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false})); 
 
@@ -24,7 +24,7 @@ app.use((req, res, next)=>{
 
 app.use('/produtos', rotaDeProdutos);
 
-app.use(express.static('public'));
+
 
 app.use((req, res, next)=>{
     const error = new Error('Página não encontrada');
