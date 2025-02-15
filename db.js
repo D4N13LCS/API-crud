@@ -1,4 +1,4 @@
-const db = require('mysql');
+const db = require('mysql2');
 require('dotenv').config()
 
 var pool = db.createPool(

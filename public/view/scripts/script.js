@@ -41,6 +41,7 @@ form.addEventListener('submit', (evt) => {
             if (res.ok) {
                 window.alert('Produto cadastrado com sucesso');
             } else {
+                console.log(res)
                 window.alert('Erro ao cadastrar produto');
             }
         })
