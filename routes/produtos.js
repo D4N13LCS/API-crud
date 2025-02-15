@@ -5,11 +5,11 @@ const db = require('../db').pool;
 // Retorna todos os produtos
 router.get('/', (req, res, next)=>{
     db.getConnection((erro, conex)=>{
-        if(erro){return res.send(500).send({ erro: erro})}
+        if(erro){return res.status(500).send({ erro: erro})}
         conex.query(
             "select * from produtos",
             (erro, resultado, field)=>{
-                if(erro){return res.send(500).send({ erro: erro})}
+                if(erro){return res.status(500).send({ erro: erro})}
                 const response = {
                     quantidade: resultado.length,
                     produtos: resultado.map((prod)=>{
