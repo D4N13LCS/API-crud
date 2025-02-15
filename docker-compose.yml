@@ -1,0 +1,38 @@
+
+services:
+  app:
+    container_name: app
+    build: 
+      context: .
+      dockerfile: ./Docker/app.dockerfile
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - mysql
+    networks:
+      - rede-qualquer
+    ports:
+      - "3000:3000"
+  
+  mysql:
+    container_name: mysql
+    build:
+      context: .
+      dockerfile: ./Docker/mysql.dockerfile
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - rede-qualquer
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbvolume:/var/lib/mysql 
+
+networks:
+  rede-qualquer:
+    driver: bridge
+
+volumes:
+  dbvolume:

@@ -24,6 +24,7 @@ app.use((req, res, next)=>{
 
 app.use('/produtos', rotaDeProdutos);
 
+app.use(express.static('public'));
 
 app.use((req, res, next)=>{
     const error = new Error('Página não encontrada');
@@ -39,5 +40,3 @@ app.use((erro, req, res, next)=>{
 });
 
 module.exports = app;
-
-//https://api-crud-daniel-7c967317f81f.herokuapp.com/

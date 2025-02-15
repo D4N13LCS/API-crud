@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="estilos/style.css" media="all">
-    <link rel="stylesheet" href="estilos/tablet.css" media="screen and (min-width: 768px) and (max-width: 992px)">
-    <link rel="stylesheet" href="estilos/desktop.css" media="screen and (min-width: 992px)">
+    <link rel="stylesheet" href="view/estilos/style.css" media="all">
+    <link rel="stylesheet" href="view/estilos/tablet.css" media="screen and (min-width: 768px) and (max-width: 992px)">
+    <link rel="stylesheet" href="view/estilos/desktop.css" media="screen and (min-width: 992px)">
 </head>
 <body>
     <main>
         <section id="login">
             <div id="imagem">
-                
+               
             </div>
             <br>
             <div id="formulario">
                 <h1>Painel de controle</h1>
                 <p>Aqui você pode cadastrar, editar e deletar produtos</p>
-                <form action="../routes/usuarios.js" method="POST" autocomplete="on">
+                <form action="../routes/produtos.js" method="POST" autocomplete="on">
                     <div id="ident" class="campos">
-                        <label for="icode"><img src="imagens/barcode_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="" class="icone"></label>
+                        <label for="icode"><img src="view/imagens/barcode_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="" class="icone"></label>
                         <input type="number" name="code" id="icode" placeholder="ID do produto" min="0">
                     </div>
                     <div id="p_name" class="campos">
-                        <label for="iprod_name"><img src="imagens/produto_ico.png" alt="" class="icone"></label>
+                        <label for="iprod_name"><img src="view/imagens/produto_ico.png" alt="" class="icone"></label>
                         <input type="text" name="prod_name" id="iprod_name" required placeholder="Nome do produto">
                     </div>
                     <div id="senha" class="campos">
-                        <label for="iprice"><img src="imagens/price_ico.png" alt="ícone de chave" class="icone"></label>
+                        <label for="iprice"><img src="view/imagens/price_ico.png" alt="ícone de chave" class="icone"></label>
                         <input type="text" name="price" id="iprice"  required placeholder="preço" >
                     </div>
                     <div id="cadastrar">
@@ -44,6 +44,6 @@
             </div>
         </section>
     </main>
-    <script src="scripts/script.js"></script>
+    <script src="view/scripts/script.js"></script>
 </body>
 </html>

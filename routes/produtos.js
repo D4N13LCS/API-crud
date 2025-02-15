@@ -36,11 +36,10 @@ router.get('/', (req, res, next)=>{
 });
 
 // Insere um produto
-router.post('/',(req, res, next)=>{
-    console.log(req.file);
+router.post('/',(req, res)=>{
     db.getConnection((erro, conex)=>{
-            conex.query(
-                'INSERT INTO produtos (nome, preco) VALUES (?, ?)', 
+            if(erro){ return res.status(500).send({Erro: erro})}
+            conex.query('INSERT INTO produtos(nome, preco) VALUES (?, ?);', 
                 [req.body.nome, 
                 req.body.preco
                 ], 

@@ -49,7 +49,7 @@ main > section#login > div#imagem > img{
 section#login > div#imagem{
     border-radius: 10px 10px 0px 0px;
     height: 200px;
-    background-image: url(file:///C:/Users/Optx%209010/Documents/estudos/API%20REST/view/imagens/pexels-tyler-lastovich-699122.jpg);
+    background-image: url(../imagens/pexels-tyler-lastovich-699122.jpg);
     background-size: cover;
     background-position: center;
 }

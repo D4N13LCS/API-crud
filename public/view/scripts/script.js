@@ -1,10 +1,8 @@
-"use strict";
-
 const urlProduto = "http://localhost:3000/produtos";
 const form = document.getElementById('formulario');
 const btn_cdstr = document.getElementById('cdstr');
 const btn_del = document.getElementById('del');
-
+console.log(btn_cdstr.id)
 btn_cdstr.addEventListener('mouseover', ()=>{
     document.getElementById('icode').removeAttribute('required');
 });
@@ -30,9 +28,9 @@ form.addEventListener('submit', (evt) => {
     
     const dados = { nome: nome, preco: preco };
     const btn = evt.submitter.id
-
-    if(btn == 'cdstr'){
-        fetch(urlProduto, {
+    console.log(btn)
+    if(btn === 'cdstr'){
+        fetch("http://localhost:3000/produtos", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -51,7 +49,7 @@ form.addEventListener('submit', (evt) => {
             window.alert('Erro na requisição');
         });
 
-    }  else if(btn == 'del'){
+    }  else if(btn === 'del'){
         fetch(urlProduto, {
             method: 'delete',
             headers: {

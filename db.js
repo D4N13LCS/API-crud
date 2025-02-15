@@ -1,11 +1,12 @@
 const db = require('mysql');
+require('dotenv').config()
 
 var pool = db.createPool(
     {
-    "user": "j3owxxv8ftnpckh1",
-    "password": "vefacmybz4gfuapr",
-    "database": "lv79hage45wfl1qr",
-    "host": "h40lg7qyub2umdvb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "user": "root",
+    "password": process.env.MYSQL_ROOT_PASSWORD,
+    "database": process.env.MYSQL_DATABASE,
+    "host": "localhost",
     "port": 3306,
 
 }
