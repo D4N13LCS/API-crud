@@ -6,15 +6,15 @@ Painel responsivo que possibilita o cadastro, alteração e exclusão de produto
 
 ![interfaceAPI](https://github.com/user-attachments/assets/cbf1811c-4c50-4e8d-8035-c92c589c15d4)
 
-- ## cadastro
+## cadastro
 
 Para cadastrar os produtos não é necessário inserir nenhum ID, isso é feito automaticamente. Apenas o preço e o nome devem ser inseridos.
 
-- ## alteração
+## alteração
 
 Já para alterar as informações de um produto, você deve inserir o ID do produto que deseja alterar e os novos valores nos campos "nome" e "preço".
 
-- ## exclusão
+## exclusão
 
 Para excluir um produto, basta inserir o ID do produto que deseja realizar a exclusão.
 
